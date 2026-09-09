@@ -1,0 +1,8 @@
+# Copiar este archivo como "config.properties" en la misma carpeta
+# (src/main/resources/) y completar con las credenciales reales de la
+# base de datos en la nube. Este archivo de ejemplo SI se versiona;
+# "config.properties" NO se versiona (ver .gitignore).
+
+db.url=jdbc:mysql://<host-de-tu-servicio-en-la-nube>:3306/rapidexpress_db?useSSL=true&serverTimezone=UTC
+db.user=<usuario>
+db.password=<password>
