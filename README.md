@@ -200,3 +200,19 @@ Cada modulo despliega a su vez un submenu con las operaciones disponibles
 
 Proyecto academico desarrollado como sistema de informacion de backend
 para la gestion logistica de "RapidExpress".
+
+
+RutaDAO. java (interfaz)
+Declara el método `listarDetalleEntregasPorConductorYFechas(...)
+
+RutaDA0Impl.java 
+Tiene el `JOIN` real entre `rutas`, `ruta_paquetes`, `paquetes` — trae los paquetes entregados en un rango de fechas .
+
+DetalleEntregaPaquete-java
+La clase que "transporta" cada fila del resultado (código de paquete, destino, estado, fecha de entrega...)                                                                              
+
+ReporteController. java
+Método `entregasPorConductor(...)` que llama al DAO y le pasa el resultado a la vista. También tiene `estadisticasEntregas(...)` que ya usa `Stream` (`filter`, `groupingBy`, `counting`)
+
+ReporteView- java
+Pide las fechas al usuario, llama al controller, imprime el resultado
